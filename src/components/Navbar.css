@@ -39,8 +39,12 @@ a:hover {
   color: black;
 }
 .toggle {
-  color: black;
+  color: #fff;
+  cursor: pointer;
   display: none;
+}
+.logo a {
+  background-color: #fff;
 }
 
 @media (max-width: 1200px) {
@@ -51,6 +55,7 @@ a:hover {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    background-color: #00bcbd;
   }
   .toggle {
     display: block;

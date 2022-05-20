@@ -3,16 +3,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* max-width: max-content; */
 }
 body {
   font-family: "oswald", san-serif;
 }
 h1,
 h2 {
-  font-family: "Open sans", san-serif;
+  font-family: "oswald", san-serif;
+  font-weight: bold;
+  font-size: 3rem;
 }
 a {
   text-decoration: none;
   color: inherit;
   transition: color 0.4s;
+}
+p {
+  font-family: "Open sans", san-serif;
+}
+.block {
+  width: min(90%, 1250px);
+  margin: 50px auto;
 }

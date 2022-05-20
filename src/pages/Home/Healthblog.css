@@ -1,0 +1,51 @@
+.hblog {
+  color: #184f68;
+}
+.blog {
+  cursor: default;
+  background: #f1f8fc;
+}
+.mainblog {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.blog > img {
+  width: 100%;
+}
+.blog > div {
+  font-size: 30px;
+  font-weight: 600;
+}
+.blog:hover {
+  color: #f84d4f;
+}
+.blog > p {
+  font-size: 20px;
+  color: #f84d4f;
+}
+.bbtn {
+  text-align: center;
+  padding: 10px;
+}
+.bbtn a {
+  color: #fff;
+  background: #00bcbd;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 2px;
+  margin: 20px;
+  background: linear-gradient(to left, #00bcbd 50%, #f84d4f 50%) right;
+  background-size: 200%;
+  transition: 0.7s ease-out;
+}
+.bbtn a:hover {
+  /* background: #f84d4f; */
+  /* transform: scaleX(1); */
+  background-position: left;
+}
+@media (max-width: 800px) {
+  .mainblog {
+    grid-template-columns: auto;
+  }
+}

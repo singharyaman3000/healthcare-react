@@ -1,0 +1,23 @@
+.bglocation {
+  background: url("../../image/locationbg.jpg");
+  /* margin: 150px; */
+  background-size: cover;
+  padding: 50px;
+}
+.bgtext {
+  display: block;
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+}
+.hlink {
+  background: #00bcbd;
+  display: inline-block;
+  padding: 5px;
+  margin: 20px;
+  border-radius: 5px;
+}
+.hlink:hover {
+  background: #f84d4f;
+  transition-delay: 300ms;
+}
