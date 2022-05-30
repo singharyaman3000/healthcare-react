@@ -1,0 +1,143 @@
+.banner {
+  position: relative;
+}
+.banner img {
+  width: 100%;
+}
+/* .banner2 {
+  background: url("../../image/dr-banner.jpg") no-repeat;
+  background-size: cover;
+}
+.banner3 {
+  background: url("../../image/about-banner.jpg") no-repeat;
+  background-size: cover;
+} */
+.maintext {
+  background: rgba(24, 79, 104, 0.7);
+  position: absolute;
+  /* top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+  inset: 0;
+  /* padding-block: 8.5rem; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.textty {
+  color: #184f68;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+}
+.textty > h3 {
+  font-size: 35px;
+}
+.types {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  font-size: 25px;
+}
+/* a:hover {
+  color: #00bcbd;
+} */
+.types > div {
+  background: #fff;
+  padding: 40px;
+  text-align: center;
+  margin: 20px;
+  font-weight: 600;
+  color: #00bcbd;
+}
+.types > div:hover {
+  transform: scale(1.2);
+}
+.shadow > div {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.bgform {
+  background: url("../../image/heart-img.png") no-repeat;
+  background-color: #f84d4f;
+  padding: 20px;
+  background-position: right center;
+  margin-bottom: 0;
+}
+.serform {
+  text-align: center;
+}
+::placeholder {
+  color: #fff;
+  font-size: 18px;
+}
+.serform1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  margin: 10px;
+}
+.serform1 > input,
+select {
+  background-color: #f96869;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+}
+.sbtn {
+  color: #f96869;
+  /* background-color: #f96869; */
+  margin: 10px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to left, #fff 50%, #00bcbd 50%) right;
+  background-size: 200%;
+  transition: 0.7s ease-out;
+}
+.sbtn:hover {
+  /* color: #00bcbd; */
+  background-position: left;
+}
+.wholequote {
+  display: flex;
+  flex-wrap: 1;
+}
+.wholequote.block {
+  margin-block: 0px;
+}
+@media (max-width: 1200px) {
+  .types {
+    grid-template-columns: 1fr 1fr;
+  }
+  .serform1 {
+    grid-template-columns: 1fr;
+  }
+  .wholequote {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .types {
+    grid-template-columns: 1fr;
+  }
+}
+.servicedetail {
+  margin-block: 0px;
+  padding-block: 30px;
+}
+.servicedetail h2 {
+  padding: 20px;
+}
+.servicedetail p {
+  padding-block: 20px;
+}
+.servicedetail div {
+  font-size: 25px;
+  font-weight: 700;
+  padding-block: 20px;
+}

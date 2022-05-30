@@ -1,7 +1,11 @@
 import React from "react";
 import "./Intro.css";
+import { Link } from "react-router-dom";
 import { FaBed, FaHandPaper, FaIdCard, FaUserMd } from "react-icons/fa";
 const Intro = () => {
+  const scroll = () => {
+    window.scroll(0, 0);
+  };
   return (
     <div className="div2 block">
       <div>
@@ -67,7 +71,14 @@ const Intro = () => {
           seasons greater, land sea, the created gathered bring spirit whose
           upon years fruitful third dominion cattle midst night morning bring.
         </p>
-        <input type="button" value="contact us" />
+        <Link
+          to="/contact"
+          onClick={scroll}
+          className="introbtn"
+          style={{ color: "#fff" }}
+        >
+          Contact us
+        </Link>
       </div>
     </div>
   );

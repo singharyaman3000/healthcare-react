@@ -1,0 +1,64 @@
+import React from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import "./silder1.css";
+import slide1 from "../../image/career-slide-1.jpg";
+import slide2 from "../../image/career-slide-2.jpg";
+import slide3 from "../../image/career-slide-3.jpg";
+
+const Silder1 = () => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+  return (
+    <div>
+      <Carousel
+        responsive={responsive}
+        showDots={true}
+        autoPlay={true}
+        autoPlaySpeed={2000}
+        arrows={false}
+        centerMode={true}
+        infinite={true}
+        dotListClass="custom-dot-list-style"
+      >
+        <div>
+          <img src={slide1} alt="" />
+        </div>
+        <div>
+          <img src={slide2} alt="" />
+        </div>
+        <div>
+          <img src={slide3} alt="" />
+        </div>
+        <div>
+          <img src={slide1} alt="" />
+        </div>
+        <div>
+          <img src={slide2} alt="" />
+        </div>
+        <div>
+          <img src={slide3} alt="" />
+        </div>
+      </Carousel>
+    </div>
+  );
+};
+
+export default Silder1;

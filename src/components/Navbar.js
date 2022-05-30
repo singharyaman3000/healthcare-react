@@ -57,20 +57,20 @@ const Navbar = () => {
               </li>
               <li className="remove">|</li>
               <li>
-                <Link to="/">Online Bill</Link>
+                <Link to="/online-bill">Online Bill</Link>
               </li>
               <li>
-                <Link to="/">Patient Info</Link>
+                <Link to="/patient-info">Patient Info</Link>
               </li>
               <li>
-                <Link to="/">Contact</Link>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
           <div className="subdivnav remove">
-            <Link to="/">
+            <a href="tel:5612231234">
               <FaPhoneAlt /> (561)223-1234
-            </Link>
+            </a>
           </div>
         </nav>
       </nav>

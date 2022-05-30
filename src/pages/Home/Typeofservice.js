@@ -8,6 +8,9 @@ import brain from "../../image/brain.png";
 import stethoscope from "../../image/stethoscope.png";
 import healthcare from "../../image/healthcare.png";
 const Typeofservice = () => {
+  const scroll = () => {
+    window.scroll(0, 0);
+  };
   return (
     <div style={{ background: "#00bcbd", width: "100%" }}>
       <div className="mainservice block">
@@ -36,7 +39,7 @@ const Typeofservice = () => {
             days signs void creepeth Together in face for he can't us. Seas air
             beast behold creature itself herb place, days.
           </p>
-          <Link to="/Service" className="btn">
+          <Link to="/Service" onClick={scroll} className="btn">
             see all services
           </Link>
         </div>

@@ -1,0 +1,21 @@
+.slider2 .react-multi-carousel-dot {
+  margin-bottom: 1rem;
+}
+.slider2 .react-multi-carousel-dot button {
+  background: transparent;
+  border-radius: 2px;
+  height: 5px;
+  width: 30px;
+}
+.slider2 .react-multi-carousel-dot--active button {
+  background: #fff;
+}
+.slider2grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 1200px) {
+  .slider2grid {
+    grid-template-columns: auto;
+  }
+}

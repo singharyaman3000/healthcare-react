@@ -1,0 +1,168 @@
+.career1 {
+  margin-block: 0px;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  background: #f84d4f;
+  position: relative;
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+.careergrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-block: 0px;
+  text-align: center;
+  position: relative;
+  /* position: absolute; */
+}
+.careerplaybtn {
+  position: absolute;
+  width: max-content;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.career-life-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.career-life-grid div {
+  padding: 20px;
+}
+.career-life-grid svg {
+  font-size: 50px;
+  color: #00bcbd;
+}
+.career-life-grid h4 {
+  color: #184f68;
+  font-size: 25px;
+}
+.career-life-grid p {
+  color: #184f68;
+  font-size: 20px;
+}
+.positionbtn {
+  color: #f84d4f;
+  display: block;
+  width: max-content;
+  padding: 7px;
+  margin: auto;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  border: 0.5px solid #f84d4f;
+  background: linear-gradient(to left, #fff 50%, #f84d4f 50%) right;
+  background-size: 200%;
+  transition: 0.4s ease-out;
+}
+.positionbtn:hover {
+  background-position: left;
+  color: #fff;
+}
+.positiongrid {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  margin-block: 10px;
+  box-shadow: 0 0 10px #0002;
+  grid-template-columns: 1fr 1fr;
+}
+.gridpositions {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 1200px) {
+  .careergrid {
+    grid-template-columns: auto;
+  }
+  .career-life-grid {
+    grid-template-columns: auto;
+  }
+  .positiongrid {
+    grid-template-columns: 1fr;
+  }
+  .gridpositions {
+    grid-template-columns: 1fr;
+  }
+}
+.list li::before {
+  content: "\f058";
+  font-family: FontAwesome;
+  color: #00bcbd;
+}
+.list li,
+.careerdetailb1 p {
+  font-family: "Open-sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  padding-block: 20px;
+  color: #184f68;
+}
+.formcareer input {
+  padding: 10px;
+}
+.formcareer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: fit-content;
+  border-radius: 5px;
+  /* margin: 10px; */
+}
+.formcareer label {
+  font-size: 20px;
+
+  padding-top: 20px;
+  font-family: "Open-sans", sans-serif;
+}
+.formcareer a {
+  color: #fff;
+  display: block;
+  width: max-content;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  background: #184f68;
+}
+.attach {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+}
+.formcareer button {
+  display: block;
+  width: max-content;
+  border: none;
+  color: #f84d4f;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to left, #fff 50%, #00bcbd 50%) right;
+  background-size: 200%;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.4s ease-out;
+}
+.formcareer button:hover {
+  background-position: left;
+  color: #fff;
+}
+.careerdetail {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+}
+.careerdetailb1 {
+  color: #184f68;
+  padding-top: 10px;
+}
+.careerdetailb1 div {
+  font-size: 25px;
+  font-weight: 600;
+}

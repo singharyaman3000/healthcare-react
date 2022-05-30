@@ -10,61 +10,64 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-const Footer = () => {
+const Footer = ({ show }) => {
   return (
-    <div className="footer">
-      <div
-        style={{
-          background: "#00bcbd",
-          color: "#fff",
-          fontSize: "24px",
-          paddingBlock: "20px",
-        }}
-      >
-        <div className="footer1 block">
-          <div>
-            <Link to="/">
-              <img src={footerlogo}></img>
-            </Link>
-            <p>
-              Evening over without above be won't yielding days man, there.
-              She'd man you female stars life darkness
-            </p>
-          </div>
-          <div className="style1">
-            <h3>
-              <FaMapMarkerAlt /> 27th Avenue, New York, W2 3XE, US
-            </h3>
-            <h3>
+    <div className="footer" style={{ marginTop: "0px" }}>
+      {show ? (
+        <div
+          style={{
+            background: "#00bcbd",
+            color: "#fff",
+            fontSize: "24px",
+            paddingBlock: "20px",
+            marginTop: "0px",
+          }}
+        >
+          <div className="footer1 block">
+            <div>
               <Link to="/">
-                <FaPhoneAlt /> (561) 223-1234
+                <img src={footerlogo}></img>
               </Link>
-            </h3>
-            <h3>
-              <Link to="/">
-                <FaEnvelope /> contact@healthcare.com
-              </Link>
-            </h3>
-          </div>
-          <div>
-            <h3>
-              <Link to="/">
-                <FaFacebook /> facbook
-              </Link>
-            </h3>
-            <h3>
-              <Link to="/">
-                <FaTwitter /> twitter
-              </Link>
-            </h3>
-            <h3>
-              <Link to="/">
-                <FaYoutube /> youtube
-              </Link>
-            </h3>
+              <p>
+                Evening over without above be won't yielding days man, there.
+                She'd man you female stars life darkness
+              </p>
+            </div>
+            <div className="style1">
+              <h3>
+                <FaMapMarkerAlt /> 27th Avenue, New York, W2 3XE, US
+              </h3>
+              <h3>
+                <a href="tel:5612231234">
+                  <FaPhoneAlt /> (561) 223-1234
+                </a>
+              </h3>
+              <h3>
+                <Link to="/">
+                  <FaEnvelope /> contact@healthcare.com
+                </Link>
+              </h3>
+            </div>
+            <div>
+              <h3>
+                <Link to="/">
+                  <FaFacebook /> facbook
+                </Link>
+              </h3>
+              <h3>
+                <Link to="/">
+                  <FaTwitter /> twitter
+                </Link>
+              </h3>
+              <h3>
+                <Link to="/">
+                  <FaYoutube /> youtube
+                </Link>
+              </h3>
+            </div>
           </div>
         </div>
-      </div>
+      ) : null}
       <div style={{ background: "#00b1b2", margin: "0", padding: "50px" }}>
         <div className="footer2 block">
           <div className="subfooter">

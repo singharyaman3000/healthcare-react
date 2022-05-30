@@ -23,15 +23,18 @@ const Form = () => {
           />
           <input required type="text" placeholder="your email*" />
 
-          <select name="service" id="service">
+          <select
+            name="service"
+            id="service"
+            style={{ padding: "20px", margin: "0px" }}
+          >
             <option value="select service">select service</option>
           </select>
           <input required type="date" name="date" id="date" />
 
           <div></div>
-          <div className="button">
-            <input type="button" value="book appointment" />
-          </div>
+
+          <input type="button" value="book appointment" className="btneffect" />
         </form>
       </div>
     </div>

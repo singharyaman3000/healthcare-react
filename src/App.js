@@ -1,28 +1,53 @@
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Service from "./pages/Service";
-import Doctor from "./pages/Doctor";
-import Finddoctor from "./pages/Finddoctor";
-import Location from "./pages/Location";
-import About from "./pages/About";
-import Blog from "./pages/Blog";
-import Career from "./pages/Career";
+import { useState } from "react";
+import Service from "./pages/Service/Service";
+import Doctor from "./pages/Doctors/Doctor";
+import Finddoctor from "./pages/Finddoctors/Finddoctor";
+import Location from "./pages/Location/Location";
+import About from "./pages/About/About";
+import Blog from "./pages/Blog/Blog";
+import Career from "./pages/Career/Career";
+import Footer from "./pages/Home/Footer";
+import Patientinfo from "./pages/Patientinfo/Patientinfo";
+import Contact from "./pages/Contact/Contact";
+import Onlinebill from "./pages/Onlinebill/Onlinebill";
+import Servicedetail from "./pages/Service/Servicedetail";
+import Blogdetail from "./pages/Blog/Blogdetail";
+import Careerdetail from "./pages/Career/Careerdetail";
 function App() {
+  const [show, setShow] = useState(true);
   return (
     <div>
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/our-doctor" element={<Doctor />} />
-          <Route path="/find-doctor" element={<Finddoctor />} />
-          <Route path="/location" element={<Location />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/career" element={<Career />} />
+          <Route path="/" element={<Home setShow={setShow} />} />
+          <Route path="/service" element={<Service setShow={setShow} />} />
+          <Route path="/our-doctor" element={<Doctor setShow={setShow} />} />
+          <Route
+            path="/find-doctor"
+            element={<Finddoctor setShow={setShow} />}
+          />
+          <Route path="/location" element={<Location setShow={setShow} />} />
+          <Route path="/about" element={<About setShow={setShow} />} />
+          <Route path="/blog" element={<Blog setShow={setShow} />} />
+          <Route path="/career" element={<Career setShow={setShow} />} />
+          <Route
+            path="/online-bill"
+            element={<Onlinebill setShow={setShow} />}
+          />
+          <Route
+            path="/patient-info"
+            element={<Patientinfo setShow={setShow} />}
+          />
+          <Route path="/contact" element={<Contact setShow={setShow} />} />
+          <Route path="/service-detail" element={<Servicedetail />} />
+          <Route path="/blog-detail" element={<Blogdetail />} />
+          <Route path="/career-detail" element={<Careerdetail />} />
         </Routes>
+        <Footer show={show} />
       </Router>
     </div>
   );

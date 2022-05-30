@@ -1,0 +1,56 @@
+.contact ::placeholder {
+  color: #0000008f;
+}
+.contact {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 10px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: -60px;
+  background: #fff;
+}
+.contactform input,
+.contactform textarea {
+  padding: 10px;
+  /* display: flex; */
+  width: 100%;
+  margin-block-start: 10px;
+}
+.contactbtn {
+  color: #fff;
+  display: block;
+  width: max-content;
+  padding: 10px;
+  margin: auto;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: none;
+  background: linear-gradient(to left, #f84d4f 50%, #214e66 50%) right;
+  background-size: 200%;
+  transition: 0.6s ease-out;
+}
+.contactbtn:hover {
+  background-position: left;
+  color: #fff;
+}
+.phone,
+.email {
+  background: #fff;
+  border-radius: 50%;
+  color: #00bcbd;
+  outline: 5px solid #fff;
+  margin: 10px;
+  /* padding: 2px; */
+}
+.subcondiv {
+  font-size: 25px;
+  margin: 35px;
+}
+@media (max-width: 1200px) {
+  .contact {
+    grid-template-columns: auto;
+  }
+}

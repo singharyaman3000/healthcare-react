@@ -3,10 +3,11 @@
   color: white;
   margin-top: -200px;
   /* width: max-content; */
-  margin-top: -200px;
+  margin-top: -90px;
   padding: 50px 90px;
   display: flex;
   border-radius: 5px;
+  position: relative;
 }
 .subdiv1 {
   margin: 20px;
@@ -32,27 +33,25 @@ select {
   font-size: medium;
   cursor: pointer;
 }
-.button {
+input[type="button"] {
   background: #00bcbd;
   color: #f84d4f;
   /* display: inline-block; */
   background: linear-gradient(to left, #fff 50%, #00bcbd 50%) right;
   background-size: 200%;
-  transition: 2s ease-out;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.6s ease-out;
 }
-.button:hover {
-  /* background: #00bcbd;
-  color: #fff; */
+input[type="button"]:hover {
   background-position: left;
-  /* stop-color: currentColor; */
-  /* transition: background 2s; */
 }
 .form {
   display: grid;
   grid-template-columns: auto auto;
   gap: 10px;
 }
-::placeholder {
+.form ::placeholder {
   color: #fff;
 }
 @media (max-width: 1200px) {

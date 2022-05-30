@@ -4,7 +4,25 @@ import { Link } from "react-router-dom";
 import member1 from "../../image/member-1.jpg";
 import member2 from "../../image/member-2.jpg";
 import member3 from "../../image/member-3.jpg";
+import Expertcom from "../../components/Expertcom";
 const Experts = () => {
+  const doctors = [
+    {
+      image: member1,
+      name: "BERNICE RAY",
+      speciality: "Chief surgeon",
+    },
+    {
+      image: member2,
+      name: "LARISSA THOMAS",
+      speciality: "Otolaryngology",
+    },
+    {
+      image: member3,
+      name: "JASON BOLTON",
+      speciality: "Neurosurgery",
+    },
+  ];
   return (
     <div className="expert block">
       <h1 style={{ textAlign: "center", fontSize: "40px", color: "#184f68" }}>
@@ -14,40 +32,9 @@ const Experts = () => {
         Together own seas said fowl third herb saw also that had saying darkness
         may After together
       </p>
-      <div className="slice">
-        <div style={{ background: "#f1f8fc" }}>
-          <img src={member1} alt="" className="img" />
-          <div className="detail">
-            <h2 style={{ color: "#184f68", fontSize: "30px", padding: "5px" }}>
-              BERNICE RAY
-            </h2>
-            <p>Chief surgeon</p>
-            <Link to="/">View profile</Link>
-          </div>
-        </div>
-        <div style={{ background: "#f1f8fc" }}>
-          <img src={member2} alt="" className="img" />
-          <div className="detail">
-            <h2 style={{ color: "#184f68", fontSize: "30px", padding: "5px" }}>
-              LARISSA THOMAS
-            </h2>
-            <p>Otolaryngology</p>
-            <Link to="/">View profile</Link>
-          </div>
-        </div>
-        <div style={{ background: "#f1f8fc" }}>
-          <img src={member3} alt="" className="img" />
-          <div className="detail">
-            <h2 style={{ color: "#184f68", fontSize: "30px", padding: "5px" }}>
-              JASON BOLTON
-            </h2>
-            <p>Neurosurgery</p>
-            <Link to="/">View profile</Link>
-          </div>
-        </div>
-      </div>
+      <Expertcom doctors={doctors} />
       <div style={{ textAlign: "center", marginTop: "20px" }}>
-        <Link to="/" className="link">
+        <Link to="/our-doctor" className="link">
           meet our experts
         </Link>
       </div>

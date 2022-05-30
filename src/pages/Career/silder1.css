@@ -1,0 +1,19 @@
+/* .custom-dot-list-style{
+
+} */
+.react-multi-carousel-dot {
+  margin-bottom: 1rem;
+  /* background: linear-gradient(to top, #184f68ff, #0000);
+  padding-inline: 1.97rem; */
+  /* display: flex; */
+
+  /* width: 33%; */
+}
+.react-multi-carousel-dot button {
+  background: transparent;
+  /* padding: 0px; */
+  border: 1px solid #fff;
+}
+.react-multi-carousel-dot--active button {
+  background: #fff;
+}

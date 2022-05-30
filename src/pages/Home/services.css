@@ -29,14 +29,20 @@
   border-radius: 10px;
 }
 
-.icon :hover {
+.icon:hover .png {
+  /* color: #f84d4f; */
+  filter: invert(33%) sepia(70%) saturate(1701%) hue-rotate(331deg)
+    brightness(116%) contrast(110%);
+}
+.icon:hover .iconsub {
   color: #f84d4f;
 }
-
 .png {
   width: 13rem;
   height: fit-content;
   padding: 50px;
+  filter: invert(52%) sepia(84%) saturate(1435%) hue-rotate(140deg)
+    brightness(93%) contrast(100%);
 }
 .iconsub {
   color: #00bcbd;
@@ -44,20 +50,21 @@
   font-weight: bold;
 }
 .btn {
-  color: #ffffff;
-  background: #f84d4f;
-  border: none;
-  display: inline-block;
-  border-radius: 5px;
-  font-size: 25px;
+  background-color: #00bcbd;
+  color: #fff;
   padding: 10px;
-  /* margin: 100px auto; */
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  background: linear-gradient(to left, #f84d4f 50%, #fff 50%) right;
+  background-size: 210%;
+  transition: 0.6s ease-out;
 }
 .btn:hover {
-  background: #fff;
-  color: #f84d4f;
-  transition: background 2s;
+  background-position: left;
+  color: #00bcbd;
 }
+
 @media (max-width: 1200px) {
   .mainservice {
     grid-template-columns: auto;

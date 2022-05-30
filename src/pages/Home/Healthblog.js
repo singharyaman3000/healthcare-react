@@ -5,6 +5,9 @@ import blog2 from "../../image/blog-2.jpg";
 import blog3 from "../../image/blog-3.jpg";
 import { Link } from "react-router-dom";
 const Healthblog = () => {
+  const scroll = () => {
+    window.scroll(0, 0);
+  };
   return (
     <div className="hblog block">
       <h1 style={{ textAlign: "center", fontSize: "45px", padding: "10px" }}>
@@ -32,7 +35,9 @@ const Healthblog = () => {
         </div>
       </div>
       <div className="bbtn">
-        <Link to="/">SEE ALL HEALTHCARE BLOG</Link>
+        <Link to="/blog" onClick={scroll}>
+          SEE ALL HEALTHCARE BLOG
+        </Link>
       </div>
     </div>
   );
