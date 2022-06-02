@@ -16,8 +16,14 @@ import Onlinebill from "./pages/Onlinebill/Onlinebill";
 import Servicedetail from "./pages/Service/Servicedetail";
 import Blogdetail from "./pages/Blog/Blogdetail";
 import Careerdetail from "./pages/Career/Careerdetail";
+import Testimonial from "./pages/Career/Testimonial";
+// import { doctors } from "./pages/Doctors/Doctor";
+import Doctors from "./pages/Doctors/Doctors";
+import DoctorProfile from "./pages/Doctors/DoctorProfile";
+import Scrollbtn from "./components/Scrollbtn";
 function App() {
   const [show, setShow] = useState(true);
+
   return (
     <div>
       <Router>
@@ -46,8 +52,16 @@ function App() {
           <Route path="/service-detail" element={<Servicedetail />} />
           <Route path="/blog-detail" element={<Blogdetail />} />
           <Route path="/career-detail" element={<Careerdetail />} />
+          <Route path="/testimonial" element={<Testimonial />} />
+          {Doctors.map((doctor) => (
+            <Route
+              path={`/${doctor.username}`}
+              element={<DoctorProfile doctorinfo={doctor} />}
+            />
+          ))}
         </Routes>
         <Footer show={show} />
+        <Scrollbtn />
       </Router>
     </div>
   );

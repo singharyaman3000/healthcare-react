@@ -8,7 +8,13 @@ const Locationcom = ({ Locations }) => {
       {Locations.map((location) => {
         return (
           <div>
-            <hr />
+            <div
+              style={{
+                border: "1px solid #184f68",
+                background: "#184f68",
+                textAlign: "center",
+              }}
+            ></div>
             <div className="location-grid">
               <div style={{ paddingBlock: "10px" }} className="grid1">
                 <h3

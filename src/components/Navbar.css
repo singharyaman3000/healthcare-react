@@ -11,6 +11,10 @@
 }
 .logo {
   background: #fff;
+  /* padding-inline: 20px; */
+}
+.logoimg {
+  padding: 10px;
 }
 ul {
   list-style: none;
@@ -62,9 +66,15 @@ a:hover {
   }
   .toggle {
     display: block;
+    /* position: absolute; */
   }
   .mainnav.false,
   .remove {
     display: none;
+  }
+  .mainnav {
+    position: absolute;
+    z-index: 10000;
+    top: 3.7rem;
   }
 }

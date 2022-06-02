@@ -19,7 +19,7 @@ const About = ({ setShow }) => {
     <div>
       <Imagecom
         image={banner}
-        path={"home"}
+        path={[{ text: "home", link: "" }]}
         content={"About"}
         title={"About us"}
       />
@@ -112,14 +112,14 @@ const About = ({ setShow }) => {
         }}
       >
         <div className="block" style={{ marginBlock: "0px" }}>
-          <h2 style={{ padding: "50px", marginInline: "50px" }}>
+          <h2 style={{ padding: "10px", marginInline: "auto" }}>
             HIGH-CLASS SPECIALISTS ARE READY TO HELP YOU AT ANY TIME.
           </h2>
           <p
             style={{
-              padding: "30px",
+              padding: "20px",
               fontSize: "18px",
-              marginInline: "50px",
+              marginInline: "10px",
             }}
           >
             Contact us any suitable way and make an appointment with the doctor

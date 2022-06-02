@@ -14,7 +14,7 @@ const Service = ({ setShow }) => {
     <div>
       <Imagecom
         image={banner}
-        path={"home"}
+        path={[{ text: "home", link: "" }]}
         content={"Our Service"}
         title={"OUR SERVICE"}
       />

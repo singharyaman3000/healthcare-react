@@ -60,7 +60,7 @@ const Blog = ({ setShow }) => {
     <div>
       <Imagecom
         image={banner}
-        path={"home"}
+        path={[{ text: "home", link: "" }]}
         content={"Blog"}
         title={"FROM OUR BLOG"}
       />

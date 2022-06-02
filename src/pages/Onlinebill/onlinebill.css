@@ -44,3 +44,8 @@
   background-position: left;
   color: #fff;
 }
+@media (max-width: 1000px) {
+  .onlinebill {
+    grid-template-columns: 1fr;
+  }
+}

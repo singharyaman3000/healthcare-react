@@ -23,7 +23,7 @@
   text-transform: capitalize;
 }
 .form1 input,
-select {
+.form1 select {
   font-family: "Open sans", san-serif;
   background: #f96869;
   border: none;
@@ -51,6 +51,7 @@ input[type="button"]:hover {
   grid-template-columns: auto auto;
   gap: 10px;
 }
+
 .form ::placeholder {
   color: #fff;
 }
@@ -71,6 +72,9 @@ input[type="button"]:hover {
 }
 @media (max-width: 600px) {
   .form {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
+  }
+  .form1 > input[type="date"] {
+    width: 100%;
   }
 }

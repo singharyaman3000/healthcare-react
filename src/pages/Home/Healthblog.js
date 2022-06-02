@@ -20,17 +20,23 @@ const Healthblog = () => {
       <div className="mainblog">
         <div className="blog">
           <img src={blog1} alt="" />
-          <div>FROM FOWL MOVING NIGHT OUR WHEREIN HERB SEED</div>
+          <Link to="/blog-detail" onClick={scroll}>
+            FROM FOWL MOVING NIGHT OUR WHEREIN HERB SEED
+          </Link>
           <p>Sept 03, 2019</p>
         </div>
         <div className="blog">
           <img src={blog2} alt="" />
-          <div>MORNING FORTH THERE HIM GREAT DARKER LIGHTS</div>
+          <Link to="/blog-detail" onClick={scroll}>
+            MORNING FORTH THERE HIM GREAT DARKER LIGHTS
+          </Link>
           <p>Sept 03, 2019</p>
         </div>
         <div className="blog">
           <img src={blog3} alt="" />
-          <div>ABOVE DARKNESS LIGHTS DAY BLESSED THIRD FOR IMAGE</div>
+          <Link to="/blog-detail" onClick={scroll}>
+            ABOVE DARKNESS LIGHTS DAY BLESSED THIRD FOR IMAGE
+          </Link>
           <p>Sept 03, 2019</p>
         </div>
       </div>

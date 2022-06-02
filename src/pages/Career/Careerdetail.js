@@ -1,10 +1,21 @@
 import React from "react";
+import Imagecom from "../../components/Imagecom";
 import { Link } from "react-router-dom";
 import { FaPaperclip } from "react-icons/fa";
+import banner from "../../image/carrer-banner.jpg";
 import "./career.css";
 const Careerdetail = () => {
   return (
     <div>
+      <Imagecom
+        image={banner}
+        path={[
+          { text: "home", link: "" },
+          { text: "career", link: "career" },
+        ]}
+        content={"Technical Ambassador"}
+        title={""}
+      />
       <div className="careerdetail block">
         <div className="careerdetailb1">
           <h2>Technical Ambassador</h2>

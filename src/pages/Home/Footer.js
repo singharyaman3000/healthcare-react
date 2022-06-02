@@ -43,9 +43,9 @@ const Footer = ({ show }) => {
                 </a>
               </h3>
               <h3>
-                <Link to="/">
+                <a href="maito:contact@healthcare.com">
                   <FaEnvelope /> contact@healthcare.com
-                </Link>
+                </a>
               </h3>
             </div>
             <div>

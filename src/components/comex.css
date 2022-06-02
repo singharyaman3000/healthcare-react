@@ -3,6 +3,21 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 }
+.scrollangle {
+  color: #fff;
+  position: fixed;
+  background: #f84d4f;
+  opacity: 0.5;
+  font-size: 2.7rem;
+  padding: 0.5rem;
+  right: 0;
+  margin: 10px;
+  bottom: 0;
+  cursor: pointer;
+}
+.scrollangle:hover {
+  opacity: 1;
+}
 @media (max-width: 1200px) {
   .comex {
     grid-template-columns: auto;

@@ -18,7 +18,7 @@ const Home = ({ setShow }) => {
     window.scroll(0, 0);
   }, []);
   setShow(true);
-  const [img, setImg] = useState(hero1);
+  // const [img, setImg] = useState(hero1);
   // setTimeout(() => setImg(img === hero1 ? hero2 : hero1), 2000);
   const responsive = {
     superLargeDesktop: {
@@ -59,7 +59,14 @@ const Home = ({ setShow }) => {
         autoPlaySpeed={2000}
         infinite={true}
       >
-        <div style={{ position: "relative", minHeight: "50vh" }}>
+        <div
+          style={{
+            position: "relative",
+            minHeight: "50vh",
+            // width: "100%",
+            // height: "100%",
+          }}
+        >
           <img src={hero1} alt="" className="homeimage" />
           <div
             style={{

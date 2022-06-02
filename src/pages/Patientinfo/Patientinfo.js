@@ -10,7 +10,7 @@ const Patientinfo = ({ setShow }) => {
     <div>
       <Imagecom
         image={banner}
-        path={"home"}
+        path={[{ text: "home", link: "" }]}
         content={"Patients Information"}
         title={"PATIENTS INFORMATION"}
       />

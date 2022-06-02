@@ -11,7 +11,7 @@ const Finddoctor = ({ setShow }) => {
     <div style={{ background: "#f1f8fc" }}>
       <Imagecom
         image={banner}
-        path={"home"}
+        path={[{ text: "home", link: "" }]}
         content={"Our Doctors"}
         title={"PHYSICIAN DIRECTORY"}
       />

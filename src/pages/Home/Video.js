@@ -6,9 +6,12 @@ import "react-multi-carousel/lib/styles.css";
 import videoicon from "../../image/videoicon.png";
 import { Link } from "react-router-dom";
 import { FaQuoteLeft, FaTimesCircle } from "react-icons/fa";
-import { GoTriangleDown } from "react-icons/go";
+// import { GoTriangleDown } from "react-icons/go";
 const Video = () => {
   const [point, setPoint] = useState(false);
+  const scroll = () => {
+    window.scroll(0, 0);
+  };
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -80,7 +83,7 @@ const Video = () => {
           showDots={true}
           infinite={true}
         >
-          <div style={{ background: "#00bcbd", padding: "20px" }}>
+          <div style={{ background: "#00bcbd" }}>
             <fieldset>
               <legend>
                 <FaQuoteLeft />
@@ -102,18 +105,19 @@ const Video = () => {
             <div
               style={{
                 marginLeft: "55px",
-                marginTop: "-18px",
-                fontSize: "30px",
+                paddingBottom: "20px",
+                // marginTop: "-18px",
+                fontSize: "20px",
                 color: "#fff",
               }}
             >
-              <GoTriangleDown />
+              {/* <GoTriangleDown /> */}
               <div>
                 JOHN DOE -{" "}
                 <span
                   style={{
                     fontFamily: "Open sans",
-                    fontSize: "23px",
+                    fontSize: "15px",
                   }}
                 >
                   satisfied patient
@@ -121,7 +125,7 @@ const Video = () => {
               </div>
             </div>
           </div>
-          <div style={{ background: "#00bcbd", padding: "20px" }}>
+          <div style={{ background: "#00bcbd" }}>
             <fieldset>
               <legend>
                 <FaQuoteLeft />
@@ -143,18 +147,19 @@ const Video = () => {
             <div
               style={{
                 marginLeft: "55px",
-                marginTop: "-18px",
-                fontSize: "30px",
+                paddingBottom: "20px",
+                // marginTop: "-18px",
+                fontSize: "20px",
                 color: "#fff",
               }}
             >
-              <GoTriangleDown />
+              {/* <GoTriangleDown /> */}
               <div>
                 NINA THOMAS -{" "}
                 <span
                   style={{
                     fontFamily: "Open sans",
-                    fontSize: "23px",
+                    fontSize: "15px",
                   }}
                 >
                   satisfied patient
@@ -162,7 +167,7 @@ const Video = () => {
               </div>
             </div>
           </div>
-          <div style={{ background: "#00bcbd", padding: "20px" }}>
+          <div style={{ background: "#00bcbd" }}>
             <fieldset>
               <legend>
                 <FaQuoteLeft />
@@ -184,18 +189,19 @@ const Video = () => {
             <div
               style={{
                 marginLeft: "55px",
-                marginTop: "-18px",
-                fontSize: "30px",
+                paddingBottom: "20px",
+                // marginTop: "-18px",
+                fontSize: "20px",
                 color: "#fff",
               }}
             >
-              <GoTriangleDown />
+              {/* <GoTriangleDown /> */}
               <div>
                 NINA THOMAS -{" "}
                 <span
                   style={{
                     fontFamily: "Open sans",
-                    fontSize: "23px",
+                    fontSize: "15px",
                   }}
                 >
                   satisfied patient
@@ -204,8 +210,8 @@ const Video = () => {
             </div>
           </div>
         </Carousel>
-        <div style={{ textAlign: "end", color: "#fff" }}>
-          <Link to="/" className="a">
+        <div style={{ textAlign: "end", color: "#fff", margin: "20px" }}>
+          <Link to="/testimonial" onClick={scroll} className="a">
             VIEW ALL TESTIMONIALS
           </Link>
         </div>

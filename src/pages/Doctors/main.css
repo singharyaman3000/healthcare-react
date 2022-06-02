@@ -4,3 +4,79 @@
   color: rgb(24, 79, 104);
   padding: 20px;
 }
+.profilegrid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.profileimagegrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.profileform {
+  background: #00bcbd;
+  border-radius: 5px;
+  padding: 30px;
+  padding-block: 50px;
+  /* color: #fff; */
+}
+.profileform h3 {
+  color: #fff;
+  font-size: 30px;
+}
+.profileform ::placeholder {
+  color: #0007;
+}
+.forminput {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.forminput input {
+  padding-block: 15px;
+  padding-inline: 5px;
+  border-radius: 5px;
+  border: none;
+}
+.profileform textarea {
+  border: none;
+  width: 100%;
+  padding-inline: 5px;
+  border-radius: 5px;
+  margin-block: 10px;
+}
+.profileform a {
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  background: linear-gradient(to left, #f84d4f 50%, #214e66 50%) right;
+  background-size: 210%;
+  transition: 0.4s ease-out;
+}
+.profileform a:hover {
+  background-position: left;
+  color: #fff;
+}
+.profilecontent {
+  color: #184f68;
+  padding-block: 20px;
+}
+.profilecontent div {
+  font-size: 30px;
+}
+@media (max-width: 1200px) {
+  .profilegrid {
+    grid-template-columns: 1fr;
+  }
+  .profilelist {
+    order: 1;
+  }
+  .profileimagegrid {
+    grid-template-columns: 1fr;
+  }
+  .forminput {
+    grid-template-columns: 1fr;
+  }
+}

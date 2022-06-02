@@ -13,11 +13,11 @@
 .blog > img {
   width: 100%;
 }
-.blog > div {
+.blog > a {
   font-size: 30px;
   font-weight: 600;
 }
-.blog:hover {
+.blog > a:hover {
   color: #f84d4f;
 }
 .blog > p {

@@ -11,16 +11,19 @@ const Experts = () => {
       image: member1,
       name: "BERNICE RAY",
       speciality: "Chief surgeon",
+      username: "bernice-ray",
     },
     {
       image: member2,
       name: "LARISSA THOMAS",
       speciality: "Otolaryngology",
+      username: "larissa-thomas",
     },
     {
       image: member3,
       name: "JASON BOLTON",
       speciality: "Neurosurgery",
+      username: "jason-bolton",
     },
   ];
   return (

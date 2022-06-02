@@ -30,7 +30,7 @@ const Form = () => {
           >
             <option value="select service">select service</option>
           </select>
-          <input required type="date" name="date" id="date" />
+          <input type="date" />
 
           <div></div>
 

@@ -18,7 +18,7 @@ const Career = ({ setShow }) => {
     <div>
       <Imagecom
         image={banner}
-        path={"home"}
+        path={[{ text: "home", link: "" }]}
         content={"Careers"}
         title={"WE'ARE HIRING!"}
       />

@@ -74,7 +74,7 @@ const Location = ({ setShow }) => {
     <div>
       <Imagecom
         image={banner}
-        path={"home"}
+        path={[{ text: "home", link: "" }]}
         content={"Loactions"}
         title={"LOCATIONS"}
       />

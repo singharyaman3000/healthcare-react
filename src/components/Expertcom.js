@@ -2,6 +2,9 @@ import React from "react";
 import "./comex.css";
 import { Link } from "react-router-dom";
 const Expertcom = ({ doctors }) => {
+  const scroll = () => {
+    window.scroll(0, 0);
+  };
   return (
     <div className="comex block">
       {doctors.map((doctor) => {
@@ -15,7 +18,9 @@ const Expertcom = ({ doctors }) => {
                 {doctor.name}
               </h2>
               <p>{doctor.speciality}</p>
-              <Link to="/">View profile</Link>
+              <Link to={`/${doctor.username}`} onClick={scroll}>
+                View profile
+              </Link>
             </div>
           </div>
         );
