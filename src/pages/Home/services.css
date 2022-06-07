@@ -33,9 +33,11 @@
   /* color: #f84d4f; */
   filter: invert(33%) sepia(70%) saturate(1701%) hue-rotate(331deg)
     brightness(116%) contrast(110%);
+  transition: all 0.7s;
 }
 .icon:hover .iconsub {
   color: #f84d4f;
+  transition: all 0.7s;
 }
 .png {
   width: 13rem;

@@ -1,7 +1,7 @@
 import React from "react";
 import banner from "../../image/dr-banner.jpg";
 import Imagecom from "../../components/Imagecom";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   FaAngleDoubleRight,
   FaFacebook,
@@ -12,11 +12,14 @@ import {
   FaQuoteLeft,
 } from "react-icons/fa";
 import Doctor from "./Doctors";
-const DoctorProfile = ({ doctorinfo }) => {
+import Doctors from "./Doctors";
+const DoctorProfile = () => {
   const scroll = () => {
     window.scroll(0, 0);
   };
-  return (
+  const { d_id } = useParams();
+  const doctor = Doctors.find((doctor) => doctor.username === d_id);
+  return doctor ? (
     <div>
       <Imagecom
         image={banner}
@@ -24,14 +27,14 @@ const DoctorProfile = ({ doctorinfo }) => {
           { text: "home", link: "" },
           { text: "Our Doctors", link: "our-doctor" },
         ]}
-        content={`${doctorinfo.name}`}
-        title={`${doctorinfo.name}`}
+        content={`${doctor.name}`}
+        title={`${doctor.name}`}
       />
       <div className="profilegrid block">
         <div className="profilelist block">
           <h3 style={{ color: "#184f68", fontSize: "30px" }}>OUR EXPERTS</h3>
           {Doctor.map((doctor) => (
-            <Link to={`/${doctor.username}`}>
+            <Link to={`/our-doctor/${doctor.username}`}>
               <div style={{ display: "flex", paddingBlock: "20px" }}>
                 <FaAngleDoubleRight style={{ color: "#00bcbd" }} />
                 <div>
@@ -45,7 +48,7 @@ const DoctorProfile = ({ doctorinfo }) => {
         <div>
           <div className="profileimagegrid block">
             <div>
-              <img src={doctorinfo.image} alt="" style={{ height: "100%" }} />
+              <img src={doctor.image} alt="" style={{ height: "100%" }} />
             </div>
             <div
               style={{
@@ -54,9 +57,9 @@ const DoctorProfile = ({ doctorinfo }) => {
                 color: "#184f68",
               }}
             >
-              <h2 style={{ color: "#fff" }}>{doctorinfo.name}</h2>
+              <h2 style={{ color: "#fff" }}>{doctor.name}</h2>
               <p style={{ color: "#fff", fontSize: "25px" }}>
-                {doctorinfo.speciality}
+                {doctor.speciality}
               </p>
               <div
                 style={{
@@ -155,14 +158,14 @@ const DoctorProfile = ({ doctorinfo }) => {
               rows="5"
               placeholder="Case Description"
             ></textarea>
-            <Link to={`/${doctorinfo.username}`} onClick={scroll}>
+            <Link to={`/${doctor.username}`} onClick={scroll}>
               SUBMIT NOW
             </Link>
           </div>
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default DoctorProfile;

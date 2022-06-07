@@ -2,14 +2,19 @@ import React from "react";
 import blogimage from "../../image/blog-detail-img.jpg";
 import { FaQuoteLeft } from "react-icons/fa";
 import { useEffect } from "react";
+import { services } from "./Typeofservice";
+import { useParams } from "react-router-dom";
 const Servicedetail = () => {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
-  return (
+  const { id } = useParams();
+  const service = services.find((service) => String(service.id) === id);
+
+  return service ? (
     <div style={{ background: "#f1f8fc", color: "#184f68", fontSize: "18px" }}>
       <div className="servicedetail block">
-        <h2>Service Detail Page</h2>
+        <h2>{service.name}</h2>
         <img src={blogimage} alt="" />
         <p>
           Upon morning stars earth may let have whales seasons. Light created
@@ -80,7 +85,7 @@ const Servicedetail = () => {
         </p>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Servicedetail;

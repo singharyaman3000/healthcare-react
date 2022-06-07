@@ -2,6 +2,56 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./main.css";
 import { FaRegQuestionCircle } from "react-icons/fa";
+const services = [
+  {
+    id: 1,
+    name: "24/7 Emergency Care",
+  },
+  {
+    id: 2,
+    name: "Primary Care",
+  },
+  {
+    id: 3,
+    name: " Neurology & Sleep Medicine",
+  },
+  {
+    id: 4,
+    name: "Ophthamology",
+  },
+  {
+    id: 5,
+    name: "Cardiology",
+  },
+  {
+    id: 6,
+    name: "Home Care Services",
+  },
+  {
+    id: 7,
+    name: "Behavioral & Mental Health",
+  },
+  {
+    id: 8,
+    name: "Diagnostic Imaging",
+  },
+  {
+    id: 9,
+    name: "Physical Therapy & Rehabilitation",
+  },
+  {
+    id: 10,
+    name: "Orthopedics",
+  },
+  {
+    id: 11,
+    name: "Surgical Services",
+  },
+  {
+    id: 12,
+    name: "Wound Care & Hyperbaric Medicine",
+  },
+];
 const Typeofservice = () => {
   return (
     <div
@@ -24,43 +74,15 @@ const Typeofservice = () => {
           </p>
         </div>
         <div className="types shadow">
-          <div>
-            <Link to="/service-detail">24/7 Emergency Care</Link>
-          </div>
-          <div>
-            <Link to="/service-detail">Primary Care</Link>
-          </div>
-          <div>
-            <Link to="/service-detail">Neurology & Sleep Medicine</Link>
-          </div>
-          <div>
-            <Link to="/service-detail">Ophthamology</Link>
-          </div>
-          <div>
-            <Link to="/service-detail">Cardiology</Link>
-          </div>
-          <div>
-            <Link to="/service-detail">Home Care Services</Link>
-          </div>
-          <div>
-            <Link to="/service-detail">Behavioral & Mental Health</Link>
-          </div>
-          <div>
-            <Link to="/service-detail">Diagnostic Imaging</Link>
-          </div>
-          <div>
-            <Link to="/service-detail">Physical Therapy & Rehabilitation</Link>
-          </div>
-          <div>
-            <Link to="/service-detail">Orthopedics</Link>
-          </div>
-          <div>
-            <Link to="/service-detail">Surgical Services</Link>
-          </div>
-          <div>
-            <Link to="/service-detail">Wound Care & Hyperbaric Medicine</Link>
-          </div>
+          {services.map((service) => (
+            <div>
+              <div>
+                <Link to={`/service/${service.id}`}>{service.name}</Link>
+              </div>
+            </div>
+          ))}
         </div>
+
         <div
           style={{
             fontSize: "20px",
@@ -83,5 +105,5 @@ const Typeofservice = () => {
     </div>
   );
 };
-
+export { services };
 export default Typeofservice;

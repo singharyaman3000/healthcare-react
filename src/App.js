@@ -49,16 +49,21 @@ function App() {
             element={<Patientinfo setShow={setShow} />}
           />
           <Route path="/contact" element={<Contact setShow={setShow} />} />
-          <Route path="/service-detail" element={<Servicedetail />} />
+          {/* <Route
+            path="/service-detail/:service_id"
+            element={<Servicedetail />}
+          /> */}
           <Route path="/blog-detail" element={<Blogdetail />} />
           <Route path="/career-detail" element={<Careerdetail />} />
           <Route path="/testimonial" element={<Testimonial />} />
-          {Doctors.map((doctor) => (
+          {/* {Doctors.map((doctor) => (
             <Route
               path={`/${doctor.username}`}
               element={<DoctorProfile doctorinfo={doctor} />}
             />
-          ))}
+          ))} */}
+          <Route path="/our-doctor/:d_id" element={<DoctorProfile />} />
+          <Route path="/service/:id" element={<Servicedetail />} />
         </Routes>
         <Footer show={show} />
         <Scrollbtn />

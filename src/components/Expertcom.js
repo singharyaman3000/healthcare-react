@@ -18,7 +18,7 @@ const Expertcom = ({ doctors }) => {
                 {doctor.name}
               </h2>
               <p>{doctor.speciality}</p>
-              <Link to={`/${doctor.username}`} onClick={scroll}>
+              <Link to={`/our-doctor/${doctor.username}`} onClick={scroll}>
                 View profile
               </Link>
             </div>
