@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* max-width: max-content; */
 }
 body {
   font-family: "oswald", san-serif;
@@ -26,8 +25,9 @@ p {
   width: min(90%, 1250px);
   margin: 50px auto;
 }
-.search {
-  display: flex;
+.search > form {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
   gap: 10px;
   padding: 20px;
 }

@@ -18,7 +18,7 @@ const Navbar = () => {
             setActive(!active);
           }}
         >
-          <FaBars />
+          <FaBars style={{ marginBlock: "20px", marginInline: "40px" }} />
         </div>
       </div>
       <nav className={`mainnav flex ${active}`}>

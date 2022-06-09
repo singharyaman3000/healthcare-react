@@ -21,6 +21,9 @@ import Testimonial from "./pages/Career/Testimonial";
 import Doctors from "./pages/Doctors/Doctors";
 import DoctorProfile from "./pages/Doctors/DoctorProfile";
 import Scrollbtn from "./components/Scrollbtn";
+import Patientdetail from "./pages/Patientinfo/Patientdetail";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [show, setShow] = useState(true);
 
@@ -64,7 +67,9 @@ function App() {
           ))} */}
           <Route path="/our-doctor/:d_id" element={<DoctorProfile />} />
           <Route path="/service/:id" element={<Servicedetail />} />
+          <Route path="/patient-info/:id" element={<Patientdetail />} />
         </Routes>
+        <ToastContainer position="top-center" />
         <Footer show={show} />
         <Scrollbtn />
       </Router>

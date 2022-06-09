@@ -11,7 +11,7 @@ import {
   FaEnvelope,
   FaQuoteLeft,
 } from "react-icons/fa";
-import Doctor from "./Doctors";
+// import Doctor from "./Doctors";
 import Doctors from "./Doctors";
 const DoctorProfile = () => {
   const scroll = () => {
@@ -33,7 +33,7 @@ const DoctorProfile = () => {
       <div className="profilegrid block">
         <div className="profilelist block">
           <h3 style={{ color: "#184f68", fontSize: "30px" }}>OUR EXPERTS</h3>
-          {Doctor.map((doctor) => (
+          {Doctors.map((doctor) => (
             <Link to={`/our-doctor/${doctor.username}`}>
               <div style={{ display: "flex", paddingBlock: "20px" }}>
                 <FaAngleDoubleRight style={{ color: "#00bcbd" }} />
@@ -158,7 +158,7 @@ const DoctorProfile = () => {
               rows="5"
               placeholder="Case Description"
             ></textarea>
-            <Link to={`/${doctor.username}`} onClick={scroll}>
+            <Link to={`/our-doctor/${doctor.username}`} onClick={scroll}>
               SUBMIT NOW
             </Link>
           </div>

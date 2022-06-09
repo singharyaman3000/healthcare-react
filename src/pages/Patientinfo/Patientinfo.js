@@ -4,8 +4,44 @@ import { Link } from "react-router-dom";
 import "./patientinfo.css";
 import banner from "../../image/patient-info-banner.jpg";
 import { FaUserMd, FaAmbulance, FaRegHospital } from "react-icons/fa";
+const infotypes = [
+  { id: 1, info: "Emergency Department" },
+  {
+    id: 2,
+    info: "Inpatient Information",
+  },
+  {
+    id: 3,
+    info: "Outpatent Information",
+  },
+  {
+    id: 4,
+    info: "Hospital Stay Checklist",
+  },
+  {
+    id: 5,
+    info: "Billing Information",
+  },
+  {
+    id: 6,
+    info: "Get Healthcard",
+  },
+  {
+    id: 7,
+    info: "Interpreter Services",
+  },
+  {
+    id: 8,
+    info: "Patients & Family Rights",
+  },
+  {
+    id: 9,
+    info: "Visting Consultants",
+  },
+];
 const Patientinfo = ({ setShow }) => {
   setShow(true);
+
   return (
     <div>
       <Imagecom
@@ -38,33 +74,36 @@ const Patientinfo = ({ setShow }) => {
           </p>
 
           <div className="infotypes infoshadow">
-            <div>
-              <Link to="/">Emergency Department</Link>
-            </div>
-            <div>
+            {infotypes.map((info) => (
+              <div>
+                <Link to={`/patient-info/${info.id}`}>{info.info}</Link>
+              </div>
+            ))}
+
+            {/* <div>
               <Link to="/">Inpatient Information</Link>
             </div>
             <div>
-              <Link to="/">Outpatent Information</Link>
+              <Link to="/"></Link>
             </div>
             <div>
-              <Link to="/">Hospital Stay Checklist</Link>
+              <Link to="/"></Link>
             </div>
             <div>
-              <Link to="/">Billing Information</Link>
+              <Link to="/"></Link>
             </div>
             <div>
-              <Link to="/">Get Healthcard</Link>
+              <Link to="/"></Link>
             </div>
             <div>
-              <Link to="/">Interpreter Services</Link>
+              <Link to="/"></Link>
             </div>
             <div>
-              <Link to="/">Patients & Family Rights</Link>
+              <Link to="/"></Link>
             </div>
             <div>
-              <Link to="/">Visting Consultants</Link>
-            </div>
+              <Link to="/"></Link>
+            </div> */}
           </div>
           <p style={{ color: "#214e66", padding: "20px", fontSize: "20px" }}>
             Days so whose every fruit wherein also good fruitful appear signs
@@ -134,5 +173,5 @@ const Patientinfo = ({ setShow }) => {
     </div>
   );
 };
-
+export { infotypes };
 export default Patientinfo;

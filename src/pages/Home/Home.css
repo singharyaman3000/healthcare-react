@@ -43,7 +43,7 @@
   background-size: cover;
   background-position: center;
 }
-*/ .hometxt {
+.hometxt {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -300,7 +300,7 @@ const Blogdetail = () => {
           </div>
           <div className="blogform">
             <h3>ADD COMMENT</h3>
-            <form action="#">
+            <form action="#" autoComplete="off">
               <input type="text" placeholder="Your Name" />
               <input type="email" placeholder="Your Email" />
               <textarea
