@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FaQuoteLeft } from "react-icons/fa";
-import { GoTriangleDown } from "react-icons/go";
+
 import "./main.css";
 import Slider2 from "../Career/Slider2";
 const Review = () => {
