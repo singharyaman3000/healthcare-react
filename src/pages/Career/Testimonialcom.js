@@ -4,9 +4,13 @@ import { FaQuoteLeft } from "react-icons/fa";
 const Testimonialcom = ({ testimonial }) => {
   return (
     <div className="testblog block">
-      {testimonial.map((test) => {
+      {testimonial.map((test, index) => {
         return (
-          <div style={{ boxShadow: "0 0 10px #0005" }} className="test2">
+          <div
+            key={index}
+            style={{ boxShadow: "0 0 10px #0005" }}
+            className="test2"
+          >
             <p
               style={{
                 color: "#184f68",

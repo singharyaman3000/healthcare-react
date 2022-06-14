@@ -7,9 +7,9 @@ const Positioncom = ({ positions }) => {
   };
   return (
     <div className="gridpositions">
-      {positions.map((position) => {
+      {positions.map((position, index) => {
         return (
-          <div className="positiongrid">
+          <div key={index} className="positiongrid">
             <div>
               <h3
                 style={{

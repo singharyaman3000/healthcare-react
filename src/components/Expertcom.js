@@ -7,9 +7,9 @@ const Expertcom = ({ doctors }) => {
   };
   return (
     <div className="comex block">
-      {doctors.map((doctor) => {
+      {doctors.map((doctor, index) => {
         return (
-          <div style={{ background: "#f1f8fc" }}>
+          <div key={index} style={{ background: "#f1f8fc" }}>
             <img src={doctor.image} alt="" className="img" />
             <div className="detail">
               <h2

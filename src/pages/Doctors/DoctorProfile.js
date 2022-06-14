@@ -33,8 +33,8 @@ const DoctorProfile = () => {
       <div className="profilegrid block">
         <div className="profilelist block">
           <h3 style={{ color: "#184f68", fontSize: "30px" }}>OUR EXPERTS</h3>
-          {Doctors.map((doctor) => (
-            <Link to={`/our-doctor/${doctor.username}`}>
+          {Doctors.map((doctor, index) => (
+            <Link key={index} to={`/our-doctor/${doctor.username}`}>
               <div style={{ display: "flex", paddingBlock: "20px" }}>
                 <FaAngleDoubleRight style={{ color: "#00bcbd" }} />
                 <div>

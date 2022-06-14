@@ -74,8 +74,8 @@ const Patientinfo = ({ setShow }) => {
           </p>
 
           <div className="infotypes infoshadow">
-            {infotypes.map((info) => (
-              <div>
+            {infotypes.map((info, index) => (
+              <div key={index}>
                 <Link to={`/patient-info/${info.id}`}>{info.info}</Link>
               </div>
             ))}

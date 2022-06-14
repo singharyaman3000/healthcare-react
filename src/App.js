@@ -24,53 +24,184 @@ import Scrollbtn from "./components/Scrollbtn";
 import Patientdetail from "./pages/Patientinfo/Patientdetail";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SignUp from "./pages/signup/SignUp";
+import Login from "./pages/signup/Login";
+import Profile from "./pages/signup/Profile";
 function App() {
   const [show, setShow] = useState(true);
-
+  const [isLogin, setIsLogin] = useState(
+    localStorage.getItem("currentuser") ? true : false
+  );
   return (
     <div>
       <Router>
-        <Navbar />
+        {!isLogin ? null : <Navbar setIsLogin={setIsLogin} />}
         <Routes>
-          <Route path="/" element={<Home setShow={setShow} />} />
-          <Route path="/service" element={<Service setShow={setShow} />} />
-          <Route path="/our-doctor" element={<Doctor setShow={setShow} />} />
+          <Route
+            path="/"
+            element={
+              !isLogin ? (
+                <Login setIsLogin={setIsLogin} />
+              ) : (
+                <Home setShow={setShow} />
+              )
+            }
+          />
+          <Route
+            path="/service"
+            element={
+              !isLogin ? (
+                <Login setIsLogin={setIsLogin} />
+              ) : (
+                <Service setShow={setShow} />
+              )
+            }
+          />
+          <Route
+            path="/our-doctor"
+            element={
+              !isLogin ? (
+                <Login setIsLogin={setIsLogin} />
+              ) : (
+                <Doctor setShow={setShow} />
+              )
+            }
+          />
           <Route
             path="/find-doctor"
-            element={<Finddoctor setShow={setShow} />}
+            element={
+              !isLogin ? (
+                <Login setIsLogin={setIsLogin} />
+              ) : (
+                <Finddoctor setShow={setShow} />
+              )
+            }
           />
-          <Route path="/location" element={<Location setShow={setShow} />} />
-          <Route path="/about" element={<About setShow={setShow} />} />
-          <Route path="/blog" element={<Blog setShow={setShow} />} />
-          <Route path="/career" element={<Career setShow={setShow} />} />
+          <Route
+            path="/location"
+            element={
+              !isLogin ? (
+                <Login setIsLogin={setIsLogin} />
+              ) : (
+                <Location setShow={setShow} />
+              )
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              !isLogin ? (
+                <Login setIsLogin={setIsLogin} />
+              ) : (
+                <About setShow={setShow} />
+              )
+            }
+          />
+          <Route
+            path="/blog"
+            element={
+              !isLogin ? (
+                <Login setIsLogin={setIsLogin} />
+              ) : (
+                <Blog setShow={setShow} />
+              )
+            }
+          />
+          <Route
+            path="/career"
+            element={
+              !isLogin ? (
+                <Login setIsLogin={setIsLogin} />
+              ) : (
+                <Career setShow={setShow} />
+              )
+            }
+          />
           <Route
             path="/online-bill"
-            element={<Onlinebill setShow={setShow} />}
+            element={
+              !isLogin ? (
+                <Login setIsLogin={setIsLogin} />
+              ) : (
+                <Onlinebill setShow={setShow} />
+              )
+            }
           />
           <Route
             path="/patient-info"
-            element={<Patientinfo setShow={setShow} />}
+            element={
+              !isLogin ? (
+                <Login setIsLogin={setIsLogin} />
+              ) : (
+                <Patientinfo setShow={setShow} />
+              )
+            }
           />
-          <Route path="/contact" element={<Contact setShow={setShow} />} />
+          <Route
+            path="/contact"
+            element={
+              !isLogin ? (
+                <Login setIsLogin={setIsLogin} />
+              ) : (
+                <Contact setShow={setShow} />
+              )
+            }
+          />
           {/* <Route
             path="/service-detail/:service_id"
-            element={<Servicedetail />}
+            element={!isLogin?<Login/>:<Servicedetail />}
           /> */}
-          <Route path="/blog-detail" element={<Blogdetail />} />
-          <Route path="/career-detail" element={<Careerdetail />} />
-          <Route path="/testimonial" element={<Testimonial />} />
+          <Route
+            path="/blog-detail"
+            element={
+              !isLogin ? <Login setIsLogin={setIsLogin} /> : <Blogdetail />
+            }
+          />
+          <Route
+            path="/career-detail"
+            element={
+              !isLogin ? <Login setIsLogin={setIsLogin} /> : <Careerdetail />
+            }
+          />
+          <Route
+            path="/testimonial"
+            element={
+              !isLogin ? <Login setIsLogin={setIsLogin} /> : <Testimonial />
+            }
+          />
           {/* {Doctors.map((doctor) => (
             <Route
               path={`/${doctor.username}`}
-              element={<DoctorProfile doctorinfo={doctor} />}
+              element={!isLogin?<Login/>:<DoctorProfile doctorinfo={doctor} />}
             />
           ))} */}
-          <Route path="/our-doctor/:d_id" element={<DoctorProfile />} />
-          <Route path="/service/:id" element={<Servicedetail />} />
-          <Route path="/patient-info/:id" element={<Patientdetail />} />
+          <Route
+            path="/our-doctor/:d_id"
+            element={
+              !isLogin ? <Login setIsLogin={setIsLogin} /> : <DoctorProfile />
+            }
+          />
+          <Route
+            path="/service/:id"
+            element={
+              !isLogin ? <Login setIsLogin={setIsLogin} /> : <Servicedetail />
+            }
+          />
+          <Route
+            path="/patient-info/:id"
+            element={
+              !isLogin ? <Login setIsLogin={setIsLogin} /> : <Patientdetail />
+            }
+          />
+
+          <Route path="/signup" element={<SignUp />} />
+          <Route
+            path="/profile"
+            element={!isLogin ? <Login setIsLogin={setIsLogin} /> : <Profile />}
+          />
         </Routes>
         <ToastContainer position="top-center" />
-        <Footer show={show} />
+        {!isLogin ? null : <Footer show={show} />}
         <Scrollbtn />
       </Router>
     </div>

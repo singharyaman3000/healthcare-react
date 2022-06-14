@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Imagecom from "../../components/Imagecom";
 import banner from "../../image/location-banner.jpg";
 import "./contact.css";
+import emailjs from "emailjs-com";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -57,6 +58,7 @@ const Contact = ({ setShow }) => {
   };
   const validate = (e) => {
     e.preventDefault();
+
     console.log("abhay");
     if (handlename(formdata.name)) toast.warning(handlename(formdata.name));
     else if (handlephone(formdata.phone))
@@ -65,7 +67,16 @@ const Contact = ({ setShow }) => {
       toast.warning(handleemail(formdata.email));
     else if (handletextarea(formdata.textarea))
       toast.warning(handletextarea(formdata.textarea));
-    else toast.success("success");
+
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        formdata,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => toast.success("success"))
+      .catch(() => toast.error("error"));
   };
 
   return (

@@ -98,8 +98,8 @@ const Finddoctor = ({ setShow }) => {
                   {name ? (
                     searchName ? (
                       <ul>
-                        {searchName.map((names) => (
-                          <li>
+                        {searchName.map((names, index) => (
+                          <li key={index}>
                             <Link to={`/our-doctor/${names.username}`}>
                               {names.name}
                             </Link>
@@ -171,8 +171,8 @@ const Finddoctor = ({ setShow }) => {
                   {keyword ? (
                     SearchKeyword ? (
                       <ul>
-                        {SearchKeyword.map((keywords) => (
-                          <li>
+                        {SearchKeyword.map((keywords, index) => (
+                          <li key={index}>
                             <Link to={`/our-doctors/${keywords.username}`}>
                               {keywords.name}-{keywords.speciality}
                             </Link>

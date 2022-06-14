@@ -74,8 +74,8 @@ const Typeofservice = () => {
           </p>
         </div>
         <div className="types shadow">
-          {services.map((service) => (
-            <div>
+          {services.map((service, index) => (
+            <div key={index}>
               <div>
                 <Link to={`/service/${service.id}`}>{service.name}</Link>
               </div>

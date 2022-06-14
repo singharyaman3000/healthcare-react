@@ -41,9 +41,9 @@ const Video = () => {
           height="415"
           src="https://www.youtube.com/embed/xcJtL7QggTI"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
         <span
           onClick={() => {

@@ -23,6 +23,8 @@ ul {
 .mainnav {
   justify-content: space-between;
   display: flex;
+  /* display: grid; */
+  /* grid-template-columns: 5fr 3fr 1fr; */
   align-items: center;
   width: 100%;
   background: #00bcbd;
@@ -35,12 +37,54 @@ li {
 .rightnav {
   margin-left: auto;
 }
+.nav_right {
+  display: flex;
+}
 .subdivnav {
-  margin-left: auto;
+  margin-inline: auto;
   width: max-content;
   font-weight: bold;
   font-size: 20px;
   padding: 10px;
+}
+.nav_logout {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* margin-block-start: auto; */
+  /* margin-block-end: 5px; */
+  margin-block: 10px;
+  margin-inline: 10px;
+}
+.nav_logout button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 5px;
+  background: #214e66;
+  cursor: pointer;
+  transition: ease-out 0.4s;
+}
+.nav_logout svg {
+  border-radius: 50%;
+  margin: 0px;
+  background: #214e66;
+  /* width: 100%; */
+  /* height: 100%; */
+}
+.nav_logout a {
+  border: none;
+  border-radius: 5px;
+  font-size: 2.5rem;
+  /* border-radius: 50%; */
+  color: #fff;
+  cursor: pointer;
+}
+.nav_logout button:hover {
+  background: #f84d4f;
+  /* color: #fff; */
 }
 a:hover {
   color: black;
@@ -75,7 +119,11 @@ a:hover {
   }
   .mainnav {
     position: absolute;
+    grid-template-columns: auto;
     z-index: 10000;
     top: 3.7rem;
+  }
+  .nav_right {
+    flex-direction: column;
   }
 }

@@ -5,14 +5,14 @@ const Imagecom = ({ image, path, content, title }) => {
     <div className="banner">
       <img src={image} alt="banner image" style={{ minHeight: "30vh" }} />
       <div className="maintext">
-        <p>
-          {path.map((p) => (
-            <>
+        <div style={{ fontFamily: "open sans,sans-serif" }}>
+          {path.map((p, index) => (
+            <div key={index}>
               <Link to={`/${p.link}`}>{p.text}</Link> /{" "}
-            </>
+            </div>
           ))}
           <span style={{ color: "#00bcbd" }}>{content}</span>
-        </p>
+        </div>
         <h1>{title}</h1>
       </div>
     </div>

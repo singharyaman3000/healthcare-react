@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Locationcom = ({ Locations }) => {
   return (
     <div>
-      {Locations.map((location) => {
+      {Locations.map((location, index) => {
         return (
-          <div>
+          <div key={index}>
             <div
               style={{
                 border: "1px solid #184f68",

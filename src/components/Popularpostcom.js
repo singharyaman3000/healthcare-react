@@ -7,9 +7,12 @@ const Popularpostcom = ({ posts }) => {
   };
   return (
     <div>
-      {posts.map((post) => {
+      {posts.map((post, index) => {
         return (
-          <div style={{ display: "flex", margin: "10px", marginLeft: "0px" }}>
+          <div
+            key={index}
+            style={{ display: "flex", margin: "10px", marginLeft: "0px" }}
+          >
             <div style={{ paddingInline: "20px" }}>
               <img src={post.img} alt="" style={{ borderRadius: "5px" }} />
             </div>
