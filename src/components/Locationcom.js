@@ -1,7 +1,6 @@
 import React from "react";
 import "./Locationcom.css";
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
 const Locationcom = ({ Locations }) => {
   return (
     <div>

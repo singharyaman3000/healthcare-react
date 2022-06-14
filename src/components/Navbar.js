@@ -7,7 +7,7 @@ import "./Navbar.css";
 // import Home from "../pages/Home";
 const Navbar = ({ setIsLogin }) => {
   const [active, setActive] = useState(false);
-  const user = JSON.parse(localStorage.getItem("currentuser"));
+  // const user = JSON.parse(localStorage.getItem("currentuser"));
   return (
     <div className="header flex">
       <div className="logo flex">

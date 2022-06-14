@@ -18,7 +18,6 @@ import Blogdetail from "./pages/Blog/Blogdetail";
 import Careerdetail from "./pages/Career/Careerdetail";
 import Testimonial from "./pages/Career/Testimonial";
 // import { doctors } from "./pages/Doctors/Doctor";
-import Doctors from "./pages/Doctors/Doctors";
 import DoctorProfile from "./pages/Doctors/DoctorProfile";
 import Scrollbtn from "./components/Scrollbtn";
 import Patientdetail from "./pages/Patientinfo/Patientdetail";

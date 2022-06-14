@@ -62,7 +62,7 @@ const Intro = () => {
       </div>
       <div style={{ background: "#f1f8fc", padding: "50px" }}>
         <h2>NEED AN EMERGENCY HELP? CALL US!</h2>
-        <a href="#" style={{ fontSize: "28px" }}>
+        <a href="tel:+61383766284" style={{ fontSize: "28px" }}>
           +61 (0) 383 766 284
         </a>
         <hr style={{ margin: "30px 20px" }} />

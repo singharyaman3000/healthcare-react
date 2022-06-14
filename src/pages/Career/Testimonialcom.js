@@ -1,6 +1,5 @@
 import React from "react";
 import "./career.css";
-import { FaQuoteLeft } from "react-icons/fa";
 const Testimonialcom = ({ testimonial }) => {
   return (
     <div className="testblog block">

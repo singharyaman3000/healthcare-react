@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Imagecom = ({ image, path, content, title }) => {
   return (
     <div className="banner">
-      <img src={image} alt="banner image" style={{ minHeight: "30vh" }} />
+      <img src={image} alt="banner" style={{ minHeight: "30vh" }} />
       <div className="maintext">
         <div style={{ fontFamily: "open sans,sans-serif" }}>
           {path.map((p, index) => (

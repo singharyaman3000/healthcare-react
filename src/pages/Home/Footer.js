@@ -26,7 +26,7 @@ const Footer = ({ show }) => {
           <div className="footer1 block">
             <div>
               <Link to="/">
-                <img src={footerlogo}></img>
+                <img src={footerlogo} alt=""></img>
               </Link>
               <p>
                 Evening over without above be won't yielding days man, there.
